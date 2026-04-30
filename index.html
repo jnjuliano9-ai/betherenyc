@@ -108,13 +108,26 @@
     padding-right: 0.85rem;
   }
 
-  .mark {
+.mark {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    text-decoration: none;
+    padding-left: var(--gutter);
+  }
+
+  .mark-logo {
+    width: 1.7rem;
+    height: 1.7rem;
+    flex-shrink: 0;
+  }
+
+  .mark-text {
     font-family: var(--serif);
     font-weight: 500;
     font-size: 1.15rem;
     letter-spacing: -0.01em;
     color: var(--fg);
-    padding-left: var(--gutter);
   }
 
   .mark .mark-nyc {
@@ -496,8 +509,13 @@
 
 <!-- Nav -->
 <nav class="top">
-  <div class="mark">Be There <span class="mark-nyc">NYC</span></div>
-  <span class="coming-soon">Coming Soon to NYC</span>
+<a href="/" class="mark">
+  <svg class="mark-logo" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M 256 50 C 158 50 80 128 80 226 C 80 320 200 420 256 482 C 312 420 432 320 432 226 C 432 128 354 50 256 50 Z" fill="#00933C"/>
+    <text x="256" y="296" font-family="EB Garamond, Georgia, serif" font-size="230" font-weight="500" fill="#FAFAF8" text-anchor="middle" font-style="italic">B</text>
+  </svg>
+  <span class="mark-text">Be There <span class="mark-nyc">NYC</span></span>
+</a>  <span class="coming-soon">Coming Soon to NYC</span>
 </nav>
 
 <main>
